@@ -10,7 +10,7 @@
 | 0x16 | 10 | Byte[] | Unknown |
 | 0x20 | 56 | String (56 bytes) | Language? |
 
-### Book
+### Book (66 times)
 
 | Offset (from begin block) | Length (in bytes) | Type | Description |
 | - | - | - | - |
