@@ -23,3 +23,10 @@
 | 0x34 | 156 | Byte[] | Array of amount of verses inside chapter |
 | 0xD0 | 8 | INT64LE | Offset of book in bytes |
 | 0xD8 | 8 | INT64LE | Length of book in bytes |
+
+### Compressed name
+
+| Offset (from begin block) | Length (in bytes) | Type | Description |
+| - | - | - | - |
+| 0x00 | 4 | INT32LE | Length of compressed name |
+| 0x04 | (see above) | ZLib ByteArray | Compressed data of name |
