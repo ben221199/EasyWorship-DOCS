@@ -4,15 +4,11 @@
 
 ### Header
 
-**Offset:** 0x00
-
-32 bytes, where the first are forming `EasyWorship Bible Text`.
-
-### Name
-
-**Offset:** 0x20
-
-56 bytes, where it starts with the name and the rest are 0x00.
+| Offset (from begin block) | Length (in bytes) | Type | Description |
+| - | - | - | - |
+| 0x00 | 22 | String (22 bytes) | Magic: `EasyWorship Bible Text` |
+| 0x16 | 10 | Byte[] | Unknown |
+| 0x20 | 56 | String (56 bytes) | Language? |
 
 ### Book
 
@@ -29,4 +25,4 @@
 | Offset (from begin block) | Length (in bytes) | Type | Description |
 | - | - | - | - |
 | 0x00 | 4 | INT32LE | Length of compressed name |
-| 0x04 | (see above) | ZLib ByteArray | Compressed data of name |
+| 0x04 | (see above) | ZLib Byte[] | Compressed data of name |
