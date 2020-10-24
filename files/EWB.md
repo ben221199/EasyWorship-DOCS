@@ -27,7 +27,7 @@
 | 0x00 | 4 | INT32LE | Length of compressed name |
 | 0x04 | (see above) | ZLib Byte[] | Compressed data of name |
 
-# Compressed data (66 times)
+### Compressed data (66 times)
 
 After all these blocks, you will a same amount of data blocks as the Book blocks earlier.
 All these blocks are ZLib compressed.
@@ -37,3 +37,14 @@ Every line, ending with `\r\n\r\n`, is one verse of the following format:
 ```
 <line> = <chapter> ":" <verse> <SP> <text> <CRLF> <CRLF>
 ```
+
+### Footer
+
+| Offset (from begin block) | Length (in bytes) | Type | Description |
+| - | - | - | - |
+| 0x00 | 8 | Byte[] | Unknown |
+| 0x08 | 8 | String (8 bytes) | `ezwBible` |
+
+## New format
+
+SQLite
