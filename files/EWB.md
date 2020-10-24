@@ -25,9 +25,13 @@
 | Offset (from begin block) | Length (in bytes) | Type | Description |
 | - | - | - | - |
 | 0x00 | 4 | INT32LE | Length of compressed name |
-| 0x04 | (see above) | ZLib Byte[] | Compressed data of name |
+| 0x04 | (see above) | Byte[] (ZLib compressed) | Compressed data of name |
 
 ### Compressed data (66 times)
+
+| Offset (from begin block) | Length (in bytes) | Type | Description |
+| - | - | - | - |
+| 0x00 | variable | Byte[] (ZLib compressed) | Book content |
 
 After all these blocks, you will a same amount of data blocks as the Book blocks earlier.
 All these blocks are ZLib compressed.
