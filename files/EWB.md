@@ -49,7 +49,7 @@ Every line, ending with `\r\n\r\n`, is one verse of the following format:
 
 | Offset (from begin block) | Length (in bytes) | Type | Description |
 | - | - | - | - |
-| 0x00 | 8 | Byte[] | Unknown (`18 3A 00 00 00 00 00 00`) |
+| 0x00 | 8 | INT64LE | Offset of [compressed name](#compressed-name) |
 | 0x08 | 8 | String (8 bytes) | `ezwBible` |
 
 ## New format
