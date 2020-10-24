@@ -7,7 +7,7 @@
 | Offset (from begin block) | Length (in bytes) | Type | Description |
 | - | - | - | - |
 | 0x00 | 22 | String (22 bytes) | Magic: `EasyWorship Bible Text` |
-| 0x16 | 10 | Byte[] | Unknown |
+| 0x16 | 10 | Byte[] | Unknown (`1A 02 3C 00 00 00 E0 00 00 00`), where it is possible that `E0` is part of book block length |
 | 0x20 | 56 | String (56 bytes) | Language? |
 
 ### Book (66 times)
@@ -46,7 +46,7 @@ Every line, ending with `\r\n\r\n`, is one verse of the following format:
 
 | Offset (from begin block) | Length (in bytes) | Type | Description |
 | - | - | - | - |
-| 0x00 | 8 | Byte[] | Unknown |
+| 0x00 | 8 | Byte[] | Unknown (`18 3A 00 00 00 00 00 00`) |
 | 0x08 | 8 | String (8 bytes) | `ezwBible` |
 
 ## New format
